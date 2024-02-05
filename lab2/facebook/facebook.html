@@ -65,14 +65,12 @@
             padding: 14px 16px;
             width: 363px;
             color: #ccd0d5;
-            border-radius: 5px;
         }
         #password {
             font-size: 17px;
             padding: 14px 16px;
             width: 363px;
             color: #ccd0d5;
-            border-radius: 5px;
         }
         .forgot a {
             position: absolute;
@@ -82,6 +80,26 @@
             text-decoration: none;
             margin-left: 700px;
 
+        }
+        .new{
+            background-color: #42b72a;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            line-height: 48px;
+            padding: 0 16px;
+            font-family: inherit;
+            position: relative;
+            text-align: center;
+            text-shadow: none;
+            vertical-align: middle;
+            color: #ffffff;
+            font-weight: bold;
+            margin-left: 650px;
+            margin-bottom: 50px;
         }
     </style>
     
@@ -98,6 +116,8 @@
     </div>
 
     <div class="forgot"><a href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzA3MTYyNTE0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&amp;ars=facebook_login">Forgot password?</a></div>
-    <a role="button" class="green_button" href="#" ajaxify="/reg/spotlight/" id="u_0_0_RV" data-testid="open-registration-form-button" rel="async">Create new account</a>
+    <form>
+        <button class="new" type="button">Create new account</button>
+    </form>
 </body>
 </html>
