@@ -17,9 +17,9 @@
         }
         .login {
             position: absolute;
-            top: 30%;
+            top: 25%;
             right: 300px; 
-            margin-top: 20px;
+            margin-top: 30px;
             width: 300px; 
         }
         .login input[type="text"],
@@ -27,6 +27,40 @@
             width: 100%; 
             padding: 10px; 
             margin-bottom: 10px; 
+        }
+        .enter{
+            border: 0;
+            line-height: 2.5;
+            width: 325px;
+            font-size: 1rem;
+            right: 150px; 
+            color: #fff;
+            border-radius: 10px;
+            background-color: rgb(76,181,249);
+        }
+        #rightline_or {
+            height:0.5px;
+            background-color:#bbbcbc;
+            width: 130px; /*318px;*/
+            position: absolute;
+            top: 73%; 
+            right: 280px; 
+        }
+        #leftline_or {
+            height:0.5px;
+            background-color:#bbbcbc;
+            width: 130px; /*318px;*/
+            position: absolute;
+            top: 73%; 
+            right: 460px; 
+        }
+        #or{
+            position: absolute;
+            color: #9fa0a0;
+            width: 300px; 
+            position: absolute;
+            top: 71%; 
+            right: 150px; 
         }
     </style>
 </head>
@@ -37,10 +71,15 @@
         <img class="secondphoto" src="2.PNG" width="700">
     </div>
     <div class="login">
+        <img class="logo" src="logo.webp" width="300">
         <form>
             <input type="text" id="login" name="login" placeholder="Phone number, username, or email address"><br>
             <input type="password" id="password" name="password" placeholder="Password">
+            <button class="enter" type="button">Enter</button>
         </form>
     </div>
+        <hr id="rightline_or">
+        <hr id="leftline_or">
+    <p id="or">OR</p>
 </body>
 </html>
