@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neka's Instagram</title>
+    <style>
+        .photos {
+            position: relative;
+            width: 700px;
+            margin: 2 auto;
+        }
+        .secondphoto {
+            position: absolute;
+            top: 0;
+            left: 125px;
+            margin-top: 20px;
+        }
+        .login {
+            position: absolute;
+            top: 30%;
+            right: 300px; 
+            margin-top: 20px;
+            width: 300px; 
+        }
+        .login input[type="text"],
+        .login input[type="password"] {
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photos">
+        <img src="1.PNG" width="700">
+        <img class="secondphoto" src="2.PNG" width="700">
+    </div>
+    <div class="login">
+        <form>
+            <input type="text" id="login" name="login" placeholder="Phone number, username, or email address"><br>
+            <input type="password" id="password" name="password" placeholder="Password">
+        </form>
+    </div>
+</body>
+</html>
