@@ -5,7 +5,7 @@
     <title>Neka's Microsoft</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -55,12 +55,31 @@
             width: 15px;
             vertical-align: middle;
         }
+        .banner {
+            position: relative;
+        }
+
         .today_future_text{
             position: absolute;
-            margin-top: 20px;
-            margin-left: 10px;
-
+            top: 0;
+            left: 0;
+            padding: 60px;
+            text-align: left;
+            line-height: 50px;
+            font-size: 45px;
+            color: #ffffff;
         }
+        .next_generation {
+            position: absolute;
+            top: 200px; 
+            left: 35px;
+            padding: 25px; 
+            text-align: left;
+            font-size: 18px; 
+            color: #ffffff;
+            width: 35%;
+        }
+
     </style>
 </head>
 <body>
@@ -81,9 +100,12 @@
 
     <div class = "banner">
         <img src="banner2.jpg" width="100%">
-        <h2 class = today_future_text>
-            
-        </h2>
+        <p class = "today_future_text">
+            <strong>Разработано для жизни <br>— сегодня и в будущем</strong>
+        </p>
+        <p class = "next_generation">
+            Следующее поколение игр. Ваши цели. Друзья и семья. С Windows 11 вы станете еще ближе к тому, что успели полюбить.
+        </p>
 
     </div>
 </body>
