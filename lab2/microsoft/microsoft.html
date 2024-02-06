@@ -37,7 +37,30 @@
             color: #262626;
             font-size: 13px; 
         }
+        .upper_right{
+            margin-top: -38px;
+            margin-right: 80px;
+            padding: 16px 8px 10px;
+            float: right;
+        }
 
+        .search_box, .user_box, .products_box {
+            display: inline-block;
+            margin-left: 10px;
+            position: relative;
+            top: -5px;
+        }
+
+        .search_img, .user_img {
+            width: 15px;
+            vertical-align: middle;
+        }
+        .today_future_text{
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 10px;
+
+        }
     </style>
 </head>
 <body>
@@ -49,6 +72,19 @@
         <span class ="link_up"><a href="https://www.microsoft.com/microsoft-365/microsoft-office">Office</a></span>
         <span class ="link_up"><a href="https://www.microsoft.com/ru-ru/windows/">Windows</a></span>
         <span class ="link_up"><a href="https://support.microsoft.com/ru-kz" >Поддержка</a></span>
+    </div>
+    <div class = "upper_right">
+        <span class ="link_up products_box"><a href="" alt="products"> Продукты Майкрософт</a></span>   
+        <span class ="link_up search_box"><a href=""><img class="search_img" src="search.png" alt="Search"> Поиск</a></span>
+        <span class ="link_up user_box"><a href="https://www.microsoft.com/rpsauth/v1/account/SignIn?ru=https%3A%2F%2Fwww.microsoft.com%2Fru-kz"><img class="user_img" src="user.png" alt="User"> Войти</a></span>
+    </div> 
+
+    <div class = "banner">
+        <img src="banner2.jpg" width="100%">
+        <h2 class = today_future_text>
+            
+        </h2>
+
     </div>
 </body>
 </html>
