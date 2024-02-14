@@ -1,3 +1,4 @@
+
 function addItem() {
     var inputValue = document.getElementById("todo-input").value;
     if (inputValue === '') {
@@ -18,16 +19,20 @@ function addItem() {
 
     listItem.appendChild(deleteButton);
 
+    listItem.addEventListener('click', toggleDone);
+
     document.getElementById("todo-list").appendChild(listItem);
 
     document.getElementById("todo-input").value = '';
 }
 
-function isDone() {
+
+function toggleDone() {
     this.classList.toggle('done');
 }
 
+
 var listItems = document.getElementsByTagName("li");
 for (var i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener('click', isDone);
+    listItems[i].addEventListener('click', toggleDone);
 }

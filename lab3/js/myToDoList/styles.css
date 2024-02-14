@@ -44,6 +44,7 @@ ul {
 
 li {
     margin: 10px 0;
+    position: relative;
 }
 
 .delete-btn {
@@ -53,8 +54,20 @@ li {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 .delete-btn:hover {
     background-color: #cc0000;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.done:before {
+    content: "\2713";
+    margin-right: 5px;
+    color: #4caf50;
 }
