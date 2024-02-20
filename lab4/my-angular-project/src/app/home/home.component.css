@@ -1,0 +1,26 @@
+.results {
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    margin-top: 50px;
+    justify-content: space-around;
+  }
+  
+  input[type="text"] {
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 60px;
+    display: inline-block;
+    width: 15%;
+  }
+  
+  button {  
+    padding: 11px;
+    margin-left: 10px;
+    border: solid 1px var(--primary-color);
+    background-color: rgb(158, 225, 0);
+    border-radius: 8px;
+    font-weight: bold;
+  }
