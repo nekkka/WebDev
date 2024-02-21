@@ -18,3 +18,13 @@
 .share-button:hover, .buy-button:hover {
   background-color: #a7ff11; 
 }
+.product-container {
+    width: 48%; 
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 15px; 
+    box-sizing: border-box;
+    vertical-align: top;
+}

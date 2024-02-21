@@ -6,33 +6,30 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <h2>Products</h2>
-    <div *ngFor="let product of products">
-    <h3>
-      <a class="name" [title]="product.name + ' details'">
-        {{ product.name }}
-      </a>
-    </h3>
-    <img [src]="product.image" alt="{{ product.name }}" width="300">
-    <p class="description">
-      <strong> Description: </strong> {{ product.description }}
-    </p>
-    <p class="description">
+  <div *ngFor="let product of products" class="product-container">
+  <h3>
+    <a class="name" [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+  <img [src]="product.image" alt="{{ product.name }}" width="300">
+  <p class="description">
+    <strong> Description: </strong> {{ product.description }}
+  </p>
+  <p class="description">
     <strong>Rating: </strong> {{ product.rating }}
-    </p>
+  </p>
 
-    <a [href]="'https://wa.me/?text=Check%20out%20' + product.name + '%20at%20this%20link:%20' + product.buyLink"
-   class="share-button">
-   Share via WhatsApp
-    </a>
+  <a [href]="'https://wa.me/?text=Check%20out%20' + product.name + '%20at%20this%20link:%20' + product.buyLink"
+     class="share-button">
+     Share via WhatsApp
+  </a>
 
-    <a [href]="product.buyLink"
-   class="buy-button">
-   Buy now
-    </a>
+  <a [href]="product.buyLink" class="buy-button">
+     Buy now
+  </a>
+</div>
 
-      
-  </div>
   `,
   styleUrl: './product-list.component.css'
 })
