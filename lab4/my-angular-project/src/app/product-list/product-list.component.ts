@@ -21,13 +21,16 @@ import { CommonModule } from '@angular/common';
     <strong>Rating: </strong> {{ product.rating }}
     </p>
 
-    <a [href]="'https://wa.me/?text=Check%20out%20' + product.name + '%20at%20this%20link:%20' + product.buyLink">
-    Share via WhatsApp
+    <a [href]="'https://wa.me/?text=Check%20out%20' + product.name + '%20at%20this%20link:%20' + product.buyLink"
+   class="share-button">
+   Share via WhatsApp
     </a>
 
-      <a [href]="product.buyLink">
-        Buy now
-      </a>
+    <a [href]="product.buyLink"
+   class="buy-button">
+   Buy now
+    </a>
+
       
   </div>
   `,
