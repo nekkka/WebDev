@@ -21,16 +21,15 @@ import { CommonModule } from '@angular/common';
     <strong>Rating: </strong> {{ product.rating }}
     </p>
 
-    <button type="button" (click)="share(product)" class="share-button">
-        Share via WhatsApp
-    </button>
-    <button type="button" (click)="buy(product.buyLink)">
+    <a [href]="'https://wa.me/?text=Check%20out%20' + product.name + '%20at%20this%20link:%20' + product.buyLink">
+    Share via WhatsApp
+    </a>
+
+      <a [href]="product.buyLink">
         Buy now
-      </button>
+      </a>
+      
   </div>
-  
-
-
   `,
   styleUrl: './product-list.component.css'
 })
