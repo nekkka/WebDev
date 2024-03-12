@@ -10,7 +10,8 @@ export const routes: Routes = [
     {path: 'home', component: HomeComponent, title: 'Home'},
     {path: 'about', component: AboutComponent, title: 'About'},
     {path: 'albums', component: AlbumsComponent, title: 'Albums'},
-    {path: '**', component: NotFoundComponent, title: '404 Not Found'},
-    {path: 'albums/:albumId',component: AlbumDetailComponent }
+    {path: 'albums/:albumId',component: AlbumDetailComponent, title: 'Album Details' },
+    {path: '**', component: NotFoundComponent, title: '404 Not Found'}
+    
 
 ];
