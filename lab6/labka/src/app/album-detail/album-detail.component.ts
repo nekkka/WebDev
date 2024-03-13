@@ -20,6 +20,10 @@ export class AlbumDetailComponent implements OnInit{
 
   }
   ngOnInit(): void {
+    this.getAlbum();
+  }
+
+  getAlbum(){
     this.route.paramMap.subscribe((params) => {
       const albumId = Number(params.get('albumId'));
       this.loaded = false;
@@ -30,6 +34,7 @@ export class AlbumDetailComponent implements OnInit{
       //this.album = ALBUMS.find((album) => album.id === albumId) as Albums;
       
     })
+
   }
 
 }
