@@ -5,19 +5,25 @@ import { CommonModule, NgForOf } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AlbumService } from '../album.service';
 import { log } from 'console';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-albums',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './albums.component.html',
   styleUrl: './albums.component.css'
 })
 export class AlbumsComponent implements OnInit{
   albums!: Albums[];
+  title: string;
   loaded: boolean = false;
   constructor(private AlbumService: AlbumService){
-
+    this.newAlbum = {
+      id: 101,
+      title: '',
+      body: ''
+    }
   }
   ngOnInit(): void {
     //this.albums = ALBUMS;
