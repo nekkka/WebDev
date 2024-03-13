@@ -4,6 +4,7 @@ import { ALBUMS } from '../fake-db';
 import { CommonModule, NgForOf } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AlbumService } from '../album.service';
+import { log } from 'console';
 
 @Component({
   selector: 'app-albums',
@@ -20,10 +21,23 @@ export class AlbumsComponent implements OnInit{
   }
   ngOnInit(): void {
     //this.albums = ALBUMS;
+    this.getAlbums();
+  }
+
+  
+  getAlbums(){
     this.loaded = false;
     this.AlbumService.getAlbums().subscribe((albums) => {
       this.albums = albums;
       this.loaded = true;
     });
+
+  }
+
+  deleteAlbum(id: number){
+    this.albums = this.albums.filter((p)=> p.id !== id);
+    this.AlbumService.deleteAlbum(id).subscribe(()=>{
+      console.log('deleted');
+    })
   }
 }

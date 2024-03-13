@@ -3,11 +3,12 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ALBUMS } from '../fake-db';
 import { Albums } from '../models';
 import { AlbumService } from '../album.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-album-detail',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './album-detail.component.html',
   styleUrl: './album-detail.component.css'
 })
