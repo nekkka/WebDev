@@ -16,8 +16,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class AlbumsComponent implements OnInit{
   albums!: Albums[];
-  title: string;
+  newAlbum: Albums;
   loaded: boolean = false;
+  currentAlbum: Albums | null = null;
+
   constructor(private AlbumService: AlbumService){
     this.newAlbum = {
       id: 101,
@@ -46,4 +48,30 @@ export class AlbumsComponent implements OnInit{
       console.log('deleted');
     })
   }
+
+  addAlbum(){
+    this.AlbumService.createAlbum(this.newAlbum).subscribe((album)=>{
+        console.log(album);
+        this.albums.push(album);
+        alert('Album created succesfully!');
+        this.newAlbum = {} as Albums;
+    });
+  }
+
+
+
+
+
+  updateAlbum(): void {
+    if (!this.currentAlbum) return; // Check if there is an album to update
+  
+    this.AlbumService.updateAlbum(this.currentAlbum.id, this.currentAlbum).subscribe((updatedAlbum) => {
+      const index = this.albums.findIndex(a => a.id === updatedAlbum.id);
+      if (index !== -1) {
+        this.albums[index] = updatedAlbum; // Update the album in the list
+      }
+      this.currentAlbum = null; // Reset the currentAlbum
+      alert('Album updated successfully!');
+    });
+}
 }
