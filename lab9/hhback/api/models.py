@@ -5,7 +5,7 @@ class Company(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     city = models.CharField(max_length=255)
-    address = models.TextField()
+    adress = models.TextField()
     
 
     def __str__(self):
@@ -17,7 +17,7 @@ class Company(models.Model):
             'name': self.name,
             'description': self.description,
             'city': self.city,
-            'address': self.address,
+            'adress': self.adress,
            }
 
     class Meta:
