@@ -5,6 +5,7 @@ import { Company } from './company';
 import { Vacancy } from './vacancy';
 import { DataService } from './companyserver';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
