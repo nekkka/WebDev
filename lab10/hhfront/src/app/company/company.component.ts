@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Company } from '../company';
-import { DataService } from '../companyserver';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { DataService } from '../company.service';
 
 @Component({
   selector: 'app-company',
@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './company.component.css'
 })
 export class CompanyComponent implements OnInit {
-  companies: Company[] = [];
+  companies!: Company[];
 
   constructor(private dataService: DataService) { }
 
@@ -22,8 +22,8 @@ export class CompanyComponent implements OnInit {
   }
 
   loadCompanies() {
-    this.dataService.getCompanies().subscribe(companies => {
-      this.companies = companies;
+    this.dataService.getCompanies().subscribe((companiess) => {
+      this.companies = companiess;
     });
   }
 }
